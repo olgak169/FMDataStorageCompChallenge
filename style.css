@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 14px;
+  background: url(./images/bg-mobile.png) no-repeat center center;
+  background-size: cover;
+  color: #dddbff;
+}
+
+.container {
+  max-width: 90%;
+  width: 325px;
+  margin: 0 auto;
+}
+
+.component {
+  background: #1d2c67;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.comp-one {
+  border-top-right-radius: 100px;
+}
+
+.comp-one .logo {
+  margin-bottom: 2rem;
+}
+
+.comp-one .icons a {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  background: #0c122c;
+  border-radius: 10px;
+  margin-right: 1rem;
+}
+
+.comp-one .icons #document {
+  background: url(./images/icon-document.svg) no-repeat center center, #0c122c;
+}
+
+.comp-one .icons #folder {
+  background: url(./images/icon-folder.svg) no-repeat center center, #0c122c;
+}
+
+.comp-one .icons #upload {
+  background: url(./images/icon-upload.svg) no-repeat center center, #0c122c;
+}
+
+.comp-two {
+  text-align: center;
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+.comp-two p {
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.2px;
+}
+
+.comp-two p span {
+  font-weight: 700;
+}
+
+.comp-two input {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 1rem;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  background: #14204A;
+  color: #dddbff;
+}
+
+.comp-two input::-moz-range-progress {
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+  height: 0.7rem;
+  border-radius: 7px;
+}
+
+.comp-two input::-webkit-slider-runnable-track {
+  background: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+  border-radius: 7px;
+  height: 1rem;
+}
+
+.comp-two input::-ms-fill-lower {
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+  height: 1rem;
+}
+
+.comp-two input::-moz-range-thumb {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+}
+
+.comp-two input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+}
+
+.comp-two label {
+  position: absolute;
+  bottom: -5.5rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 180px;
+  border-radius: 10px;
+  background: #fff;
+  color: #848794;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.comp-two label span {
+  font-size: 35px;
+  color: #0c122c;
+}
+
+.comp-two .comp-footer {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 700;
+}
+
+@media (min-width: 950px) {
+  body {
+    background: url(./images/bg-desktop.png) no-repeat center bottom, #0c122c;
+    background-size: 100% 52%;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    max-width: 920px;
+    width: auto;
+  }
+  .comp-one {
+    width: 350px;
+    height: 200px;
+    margin-right: 1.75rem;
+  }
+  .comp-two {
+    padding: 2.2rem 3rem;
+    width: 540px;
+    text-align: left;
+  }
+  .comp-two label {
+    left: 75%;
+    bottom: 6rem;
+    border-bottom-right-radius: 0;
+  }
+  .comp-two label::after {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    right: 0rem;
+    bottom: -1.5rem;
+    border-top: 26px solid #fff;
+    border-left: 26px solid transparent;
+  }
+}

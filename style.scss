@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+$gradient: linear-gradient(to right, hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+$blue-darkest:hsl(229, 57%, 11%);
+$blue-dark: hsl(228, 56%, 26%);
+$blue-grey: hsl(229, 7%, 55%);
+$blue-light: hsl(243, 100%, 93%);
+$slider: #14204A;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 14px;
+    background: url(./images/bg-mobile.png) no-repeat center center;
+    background-size: cover;
+    color: $blue-light;
+}
+.container {
+    max-width: 90%;
+    width: 325px;
+    margin: 0 auto;
+}
+.component {
+    background: $blue-dark;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+.comp-one {
+    border-top-right-radius: 100px;
+    .logo {
+        margin-bottom: 2rem;
+    }
+    .icons {
+        a {
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+            background: $blue-darkest;
+            border-radius: 10px;
+            margin-right: 1rem;
+        }
+        #document {
+            background: url(./images/icon-document.svg) no-repeat center center, $blue-darkest;
+        }
+        #folder {
+            background: url(./images/icon-folder.svg)no-repeat center center, $blue-darkest;
+        }
+        #upload {
+            background: url(./images/icon-upload.svg)no-repeat center center, $blue-darkest;
+        }
+    }
+}
+.comp-two {
+    text-align: center;
+    position: relative;
+    padding-bottom: 3rem;
+    p {
+        margin-bottom: 1.2rem;
+        letter-spacing: 0.2px;
+        span {
+            font-weight: 700;
+        }
+    }
+    input {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 1rem;
+        border-radius: 7px;
+        border: none;
+        outline: none;
+        background: $slider;
+        color: $blue-light;
+        &::-moz-range-progress {
+            background: $gradient;
+            height: 0.7rem;
+            border-radius: 7px;
+        }
+        &::-webkit-slider-runnable-track {
+            background: $gradient;
+            border-radius: 7px;
+            height: 1rem;
+        }
+        &::-ms-fill-lower {
+            background: $gradient;
+            height: 1rem;
+        }
+        &::-moz-range-thumb {
+            width: 0.7rem;
+            height: 0.7rem;
+            border-radius: 50%;
+            border: none;
+            background: #fff;
+        }
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 0.9rem;
+            height: 0.9rem;
+            border-radius: 50%;
+            border: none;
+            background: #fff;
+        }
+    }
+    label {
+        position: absolute;
+        bottom: -5.5rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 180px;
+        border-radius: 10px;
+        background: #fff;
+        color: $blue-grey;
+        padding: 1rem 1.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        span {
+            font-size: 35px;
+            color: $blue-darkest;
+        }
+    }
+    .comp-footer {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+    }
+
+}
+@media (min-width:950px) {
+    body {
+        background: url(./images/bg-desktop.png) no-repeat center bottom, $blue-darkest;
+        background-size: 100% 52%;
+    }
+    .container {
+        display: flex;
+        align-items: flex-end;
+        max-width: 920px;
+        width: auto;
+    }
+    .comp-one {
+        width: 350px;
+        height: 200px;
+        margin-right: 1.75rem;
+    }
+    .comp-two {
+        padding: 2.2rem 3rem;
+        width: 540px;
+        text-align: left;
+
+        label {
+            left: 75%;
+            bottom: 6rem;
+            border-bottom-right-radius: 0;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                right: 0rem;
+                bottom: -1.5rem;
+                border-top: 26px solid #fff;
+                border-left: 26px solid transparent;
+                
+            }
+        }
+    }
+}

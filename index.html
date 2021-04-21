@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script src="app.js" defer></script>
+        <title>Data storage component</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="component comp-one">
+                <div class="logo">
+                    <img src="./images/logo.svg" alt="filo logo" />
+                </div>
+                <div class="icons">
+                    <a href="#" id="document"></a>
+                    <a href="#" id="folder"></a>
+                    <a href="#" id="upload"></a>
+                </div>
+            </div>
+            <div class="component comp-two">
+                <p class="comp-two-info">
+                    You've used <span> 815 GB</span> of your storage
+                </p>
+                <input type="range" id="range" min="0" max="100" value="81.5" />
+                <label for="range"><span>185 </span> gb left</label>
+                <div class="comp-footer">
+                    <span>0 GB</span>
+                    <span>1000 GB</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
